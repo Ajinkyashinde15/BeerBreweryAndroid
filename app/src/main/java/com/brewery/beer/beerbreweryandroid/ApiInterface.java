@@ -11,17 +11,8 @@ import retrofit2.http.Query;
  * Created by Ajinkya
  */
 
-public interface ApiInterface
-{
-    //This method is used for "POST"
-    @FormUrlEncoded
 
-    //This method is used for "GET"
-    @GET("/beers")
-    Call<ServerResponse> get(
-            @Query("method") String method,
-            @Query("username") String username,
-            @Query("password") String password
-    );
+public interface ApiInterface {
+    @GET("beers")
+    Call<BeersResponse> getallBeeers(@Query("api_key") String apiKey);
 }
-
