@@ -14,10 +14,8 @@ import retrofit2.http.Query;
 
 
 public interface ApiInterface {
-    //@GET("beers")
-    //Call<BeersResponse> getallBeeers(@Query("key") String apiKey);
 
-    @GET("beer/{id}")
-    Call<BeersResponse> getoneBeeer(@Path("id") String id, @Query("key") String apiKey);
+    @GET("beer/random")
+    Call<BeersResponse> getrandomBeer(@Query("key") String apiKey);
 
 }

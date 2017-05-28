@@ -1,44 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.brewery.beer.beerbreweryandroid.HomeActivity">
+    tools:context="com.brewery.beer.beerbreweryandroid.HomeActivity"
+    android:weightSum="1"
+    android:background="#7D1935">
 
     <TextView
         android:id="@+id/beerTitle"
-        android:layout_width="268dp"
-        android:layout_height="46dp"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="@drawable/border"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:layout_x="0dp"
+        android:layout_y="19dp"
+        android:maxLines="3"
         android:text="Beer Title"
         android:textAlignment="center"
-        android:textSize="30dp"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:textColorLink="@android:color/background_dark" />
+        android:paddingTop="15dp"
+        android:textSize="24sp"
+        tools:textColorLink="@android:color/black" />
 
     <ImageView
         android:id="@+id/beerImageView"
-        android:layout_width="336dp"
-        android:layout_height="119dp"
-        app:srcCompat="@mipmap/ic_launcher"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="89dp" />
-
-    <MultiAutoCompleteTextView
-        android:id="@+id/beerDescription"
-        android:layout_width="333dp"
-        android:layout_height="188dp"
-        android:text="MultiAutoCompleteTextView"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="233dp" />
+        android:layout_width="146dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="30dp"
+        android:layout_x="114dp"
+        android:layout_y="86dp"
+        android:background="@drawable/border"
+        android:src="@mipmap/ic_launcher" />
 
     <Button
         android:id="@+id/nextButton"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="445dp" />
+        android:layout_x="108dp"
+        android:layout_y="499dp"
+        android:background="#4A96AD"
+        android:text="Next Beer"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
 
-</android.support.constraint.ConstraintLayout>
+    <MultiAutoCompleteTextView
+        android:id="@+id/beerDescription"
+        android:layout_width="match_parent"
+        android:layout_height="203dp"
+        android:layout_x="0dp"
+        android:layout_y="282dp"
+        android:background="@drawable/border"
+        android:editable="false"
+        android:hint="No description to display"
+        android:maxLines="50"
+        android:padding="10dp"
+        android:text="MultiAutoCompleteTextView"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="88dp"
+        android:layout_height="29dp"
+        android:layout_x="0dp"
+        android:layout_y="246dp"
+        android:background="@drawable/border"
+        android:paddingLeft="08dp"
+        android:paddingTop="04dp"
+        android:text="Description"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:visibility="visible" />
+
+</AbsoluteLayout>

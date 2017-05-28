@@ -12,10 +12,6 @@ public class BeersResponse {
     @SerializedName("message")
     private String message;
 
-    //Change
-    //@SerializedName("data")
-    //private List<BeerDB> data;
-
     @SerializedName("data")
     private BeerDB data;
 
