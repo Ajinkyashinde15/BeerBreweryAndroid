@@ -9,7 +9,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient  {
 
-    public static final String BASE_URL = "http://api.brewerydb.com/v2/";
+//    public static final String BASE_URL = "https://api.brewerydb.com/v2/beer/oeGSxs/";
+
+    public static final String BASE_URL = "https://api.brewerydb.com/v2/";
     private static Retrofit retrofit = null;
 
 

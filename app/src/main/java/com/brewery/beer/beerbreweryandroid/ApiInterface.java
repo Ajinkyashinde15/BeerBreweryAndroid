@@ -5,6 +5,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 /**
@@ -13,6 +14,10 @@ import retrofit2.http.Query;
 
 
 public interface ApiInterface {
-    @GET("beers")
-    Call<BeersResponse> getallBeeers(@Query("api_key") String apiKey);
+    //@GET("beers")
+    //Call<BeersResponse> getallBeeers(@Query("key") String apiKey);
+
+    @GET("beer/{id}")
+    Call<BeersResponse> getoneBeeer(@Path("id") String id, @Query("key") String apiKey);
+
 }

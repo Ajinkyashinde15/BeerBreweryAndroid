@@ -14,14 +14,17 @@ public class BeerDB
     @SerializedName("name")
     private String name;
     @SerializedName("description")
-    private boolean description;
-    @SerializedName("labels")
-    private String labels;
+    private String description;
 
-    public BeerDB(String name, boolean description, String labels) {
+    //change
+    @SerializedName("labels")
+    private IconClass icon;
+
+
+    public BeerDB(String name, String description, IconClass icon) {
         this.name = name;
         this.description = description;
-        this.labels = labels;
+        this.icon = icon;
     }
 
     public String getName() {
@@ -32,19 +35,18 @@ public class BeerDB
         this.name = name;
     }
 
-    public boolean isDescription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(boolean description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    public String getLabels() {
-        return labels;
+    public IconClass getLabels() {
+        return icon;
     }
 
-    public void setLabels(String labels) {
-        this.labels = labels;
-    }
+   public void setLabels(IconClass icon) { this.icon = icon;}
+
 }

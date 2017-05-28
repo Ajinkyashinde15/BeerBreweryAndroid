@@ -9,15 +9,46 @@ import java.util.List;
 
 public class BeersResponse {
 
-    @SerializedName("results")
-    private List<BeerDB> results;
+    @SerializedName("message")
+    private String message;
 
-    public List<BeerDB> getResults() {
-        return results;
+    //Change
+    //@SerializedName("data")
+    //private List<BeerDB> data;
+
+    @SerializedName("data")
+    private BeerDB data;
+
+    @SerializedName("status")
+    private String status;
+
+    public BeersResponse(String message, BeerDB data, String status) {
+        this.message = message;
+        this.data = data;
+        this.status = status;
     }
 
-    public void setResults(List<BeerDB> results) {
-        this.results = results;
+    public String getMessage() {
+        return message;
     }
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public BeerDB getData() {
+        return data;
+    }
+
+    public void setData(BeerDB data) {
+        this.data = data;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }

@@ -20,6 +20,7 @@ import retrofit2.Response;
 
 public class HomeActivity extends AppCompatActivity {
 
+    //Api url= https://api.brewerydb.com/v2/beer/oeGSxs?key=485d537596b0197fe767a7ed5dc562fe&format=json;
     private final static String API_KEY = "485d537596b0197fe767a7ed5dc562fe";
     Button nextButton;
     TextView beerTitle;
@@ -44,14 +45,15 @@ public class HomeActivity extends AppCompatActivity {
                 ApiClient.getClient().create(ApiInterface.class);
 
         try {
-            Call<BeersResponse> call = apiService.getallBeeers(API_KEY);
+//            Call<BeersResponse> call = apiService.getallBeers('API_KEY);
+            Call<BeersResponse> call = apiService.getoneBeeer("oeGSxs",API_KEY);
+
             call.enqueue(new Callback<BeersResponse>() {
                 @Override
                 public void onResponse(Call<BeersResponse> call, Response<BeersResponse> response) {
-                    List<BeerDB> beer  = response.body().getResults();
-                    //   Log.d(TAG + " Ajinkya", "Number of movies received: " + movies);
-                    //Toast.makeText(getApplicationContext(), "Number of movies received: " + movies, Toast.LENGTH_LONG).show();
-
+                    BeerDB beer  = response.body().getData();
+                    //Log.d(TAG + " Ajinkya", "Number of movies received: " + beer.getLabels());
+                    Toast.makeText(getApplicationContext(), "Number of movies received: " + beer.getLabels().getIcon(), Toast.LENGTH_LONG).show();
                 }
 
                 @Override
