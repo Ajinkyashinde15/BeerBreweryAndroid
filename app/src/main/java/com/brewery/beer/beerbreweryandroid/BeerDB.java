@@ -9,24 +9,25 @@ import java.util.List;
  * Created by Ajinkya
  */
 
+//Create and define attributes in JSON file that we want to extract
 public class BeerDB
 {
+    //Define serialized variables name
     @SerializedName("name")
     private String name;
     @SerializedName("description")
     private String description;
-
-    //change
     @SerializedName("labels")
     private IconClass icon;
 
-
+    //Constructor definition
     public BeerDB(String name, String description, IconClass icon) {
         this.name = name;
         this.description = description;
         this.icon = icon;
     }
 
+    //Getter and setter method for all variables
     public String getName() {
         return name;
     }

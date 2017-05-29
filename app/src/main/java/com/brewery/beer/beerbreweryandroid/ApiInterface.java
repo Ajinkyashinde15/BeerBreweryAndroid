@@ -15,6 +15,7 @@ import retrofit2.http.Query;
 
 public interface ApiInterface {
 
+    //Call REST Api path beer/random and get random beer information
     @GET("beer/random")
     Call<BeersResponse> getrandomBeer(@Query("key") String apiKey);
 

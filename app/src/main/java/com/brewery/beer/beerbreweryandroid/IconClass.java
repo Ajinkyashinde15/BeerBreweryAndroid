@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
 
 class IconClass
 {
+    //Define serialized childvariable name
     @SerializedName("icon")
     String icon;
 
